@@ -1,3 +1,4 @@
+# Flutter 관련 파일
 .dart_tool/
 .packages
 .pub/
@@ -5,7 +6,6 @@ build/
 .flutter-plugins
 .flutter-plugins-dependencies
 .flutter-versions
-.idea/
 
 # IntelliJ 관련 파일
 *.iml
@@ -22,6 +22,7 @@ build/
 
 # Mac OS 관련 파일
 .DS_Store
+__MACOSX
 
 # Windows 관련 파일
 Thumbs.db
