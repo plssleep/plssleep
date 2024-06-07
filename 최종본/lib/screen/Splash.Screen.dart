@@ -1,3 +1,4 @@
+// Splash.Screen.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todobest_home/main.dart';
@@ -12,6 +13,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   final bool _isLogin = false;
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

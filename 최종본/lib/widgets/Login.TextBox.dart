@@ -1,10 +1,10 @@
+// Login.TextBox.dart
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todobest_home/screen/Calender.Screen.dart';
-
-import '../utils/Main.Colors.dart';
+import 'package:todobest_home/utils/Themes.Colors.dart';
 
 class LoginTextBox extends StatefulWidget {
   const LoginTextBox({super.key});
@@ -58,7 +58,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // 이메일 텍스트 박스
-              Container(
+              SizedBox(
                 height: 70,
                 child: TextFormField(
                   keyboardType: TextInputType.emailAddress,
@@ -93,7 +93,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
               ),
               const SizedBox(height: 10.0),
               // 비밀번호 텍스트 박스
-              Container(
+              SizedBox(
                 height: 70,
                 child: TextFormField(
                   key: const ValueKey(2),
@@ -143,7 +143,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
                     _errorMessage,
-                    style: TextStyle(color: Colors.red),
+                    style: const TextStyle(color: Colors.red),
                   ),
                 ),
               GestureDetector(
@@ -158,7 +158,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
                     );
 
                     if (newUser.user != null) {
-                      Get.to(() => CalenderScreen());
+                      Get.to(() => const CalenderScreen());
                     }
                   } catch (e) {
                     if (kDebugMode) {
@@ -177,7 +177,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: const BorderSide(width: 3, color: Color(0xFFFDB082)),
+                      side: BorderSide(width: 3, color: Theme1Colors.textColor),
                       borderRadius: BorderRadius.circular(33),
                     ),
                   ),
@@ -185,7 +185,7 @@ class _LoginTextBoxState extends State<LoginTextBox> {
                     '로그인',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: MainColors.textColor,
+                      color: Theme1Colors.textColor,
                       fontSize: screenHeight * 0.022,
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w600,
