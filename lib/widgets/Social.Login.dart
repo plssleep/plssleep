@@ -98,7 +98,7 @@ class _SocialLoginState extends State<SocialLogin> {
   }
 
   void navigatorToMainPage() {
-    Get.to(() => CommunityMainPage());
+    Get.to(() => ());
   }
 
 

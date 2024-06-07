@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import '../screen/Calender.Screen.dart';
 import 'Board.Data.dart';
 import 'Components.dart';
 import 'WritePost.Screen.dart';
@@ -36,7 +39,7 @@ class _CommunityMainPageState extends State<CommunityMainPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // 뒤로 가기 버튼 동작 추가
+            Get.to(() => CalenderScreen());
           },
         ),
       ),

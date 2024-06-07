@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class NaviBar extends StatelessWidget {
+class CalenderNavi extends StatelessWidget {
   final DateTime focusedDay;
   final CalendarFormat calendarFormat;
   final VoidCallback onPrevMonth;
   final VoidCallback onNextMonth;
   final ValueChanged<CalendarFormat> onFormatChanged;
 
-  const NaviBar({
+  const CalenderNavi({
     required this.focusedDay,
     required this.calendarFormat,
     required this.onPrevMonth,

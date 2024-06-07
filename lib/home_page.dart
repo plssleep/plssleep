@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'utils/NaviBar.dart';
+import 'utils/CalenderNavi.dart';
 import 'screen/Week.Screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          NaviBar(
+          CalenderNavi(
             focusedDay: _focusedDay,
             calendarFormat: _calendarFormat,
             onPrevMonth: _onPrevMonth,

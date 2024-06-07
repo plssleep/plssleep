@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '../utils/NaviBar.dart';
+import 'package:todobest_home/Setting.MainPage.dart';
+import 'package:todobest_home/community/Community.MainPage.dart';
+import '../utils/CalenderNavi.dart';
 import 'Week.Screen.dart';
 
 class CalenderScreen extends StatefulWidget {
@@ -72,7 +76,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
       ),
       body: Column(
         children: [
-          NaviBar(
+          CalenderNavi(
             focusedDay: _focusedDay,
             calendarFormat: _calendarFormat,
             onPrevMonth: _onPrevMonth,
@@ -127,6 +131,23 @@ class _CalenderScreenState extends State<CalenderScreen> {
           ),
         ],
         selectedItemColor: Colors.amber[800],
+        onTap: (int index) {
+          // 여기에 각 인덱스별로 수행할 작업을 추가하세요.
+          switch (index) {
+            case 0:
+              Get.to(() => CalenderScreen());
+              break;
+            case 1:
+              Get.to(() => CommunityMainPage());
+              break;
+            case 2:
+              print('Star clicked');
+              break;
+            case 3:
+              Get.to(() =>SettingMainPage());
+              break;
+          }
+        },
       ),
     );
   }
